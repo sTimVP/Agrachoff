@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ремонт под ключ</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="styles_popup.css" />
+		
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="logo">
+					<img src="images/logo.svg" alt="Логотип" />
+				</div>
+				
+				<nav class="menu">
+					<p><a href="#">Меню</a></p>
+					<p><a href="#">Портфолио</a></p>
+					<p><a href="#">Цены</a></p>
+					<p><a href="#">Схема работы</a></p>
+					<p><a href="#">Отзывы</a></p>
+					<p><a href="#">Контакты</a></p>
+					<p><a href="#">Гарантия</a></p>
+				</nav>
+				<div class="header-button">
+					<button>Обратный звонок</button>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero-section">
+				<div class="hero-content">
+					<h1>Ремонт под ключ от 2900 руб/м²</h1>
+					<p class="subtext">
+						При заказе ремонта делаем<br />дизайн-проект в подарок
+					</p>
+					<div class="hero-icons">
+						<div class="icon">
+							<img
+								src="images/checked truck.svg"
+								alt="Иконка бесплатного выезда"
+							/>
+							<p>Бесплатный выезд<br />в день обращения</p>
+						</div>
+						<div class="icon">
+							<img src="images/guarantee.svg" alt="Иконка гарантии" />
+							<p>Гарантия на работу<br />до 5 лет</p>
+						</div>
+						<div class="icon">
+							<img
+								src="images/time_management.svg"
+								alt="Иконка соблюдения сроков"
+							/>
+							<p>Жесткое соблюдение<br />сроков</p>
+						</div>
+					</div>
+				</div>
+				<div class="calculator">
+					<h2>Рассчитайте стоимость ремонта</h2>
+					<form>
+						<label for="area">Площадь квартиры:</label>
+						<input
+							type="range"
+							id="area"
+							name="area"
+							min="10"
+							max="200"
+							value="68"
+						/>
+						<p class="area-value">68м²</p>
+
+						<label for="property-type">Тип жилья:</label>
+						<div class="property-type">
+							<input type="radio" id="secondary" name="property-type" checked />
+							<label for="secondary">Вторичное жилье</label>
+
+							<input type="radio" id="new" name="property-type" />
+							<label for="new">Новостройка</label>
+
+							<input type="radio" id="office" name="property-type" />
+							<label for="office">Офис</label>
+						</div>
+
+						<label for="rooms">Кол-во комнат:</label>
+						<div class="room-count">
+							<input type="radio" id="one-room" name="rooms" checked />
+							<label for="one-room">1</label>
+
+							<input type="radio" id="two-rooms" name="rooms" />
+							<label for="two-rooms">2</label>
+
+							<input type="radio" id="three-rooms" name="rooms" />
+							<label for="three-rooms">3+</label>
+
+							<input type="radio" id="studio" name="rooms" />
+							<label for="studio">Студия</label>
+						</div>
+						<div class="calc-btn">
+							<button type="submit">Отправить</button>
+						</div>
+						btn
+					</form>
+				</div>
+			</section>
+			<img
+				src="images/side image.svg"
+				alt="Декоративное изображение"
+				class="background-image"
+			/>
+		</main>
+
+
+		<!-- Остальная часть страницы -->
+<footer>
+	<div class="container container__footer">
+		<!-- Кнопка для открытия формы обратной связи -->
+<button id="open-popup-btn" class="contact-button">Обратная связь</button>
+
+<!-- Popup форма обратной связи -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span id="close-popup-btn" class="close-btn">&times;</span>
+        <h2>Обратная связь</h2>
+        <form id="contact-form">
+            <label for="email">Введите вашу почту:</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</div>
+	</div>
+</footer>
+
+		<script src="send_email.js"></script>
+		<script src="calc.js"></script>
+		
+	</body>
+</html>
